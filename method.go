@@ -27,10 +27,10 @@ func (p person) String() string {
 func (p person) modify() {
 	p.name = "李四"
 }
-
+//有不确定个数的参数 都是interface类型
 func print(b ...interface{}) {
 	for i, v := range b {
 		fmt.Println(i, v)
 	}
-	fmt.Println()
+	fmt.Println("------------------------")
 }

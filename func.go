@@ -5,7 +5,8 @@ import (
 )
 
 func main() {
-	sum := add(1, 2)
+	var pa1,pa2 int=34,56;
+	sum := add(pa1,pa2)
 	fmt.Println(sum)
 }
 
