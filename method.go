@@ -19,7 +19,7 @@ type person struct {
 	name string
 }
 
-//方法名是 String
+//方法名是 String 复写了Stringer的方法
 func (p person) String() string {
 	return "the person name is " + p.name
 }
