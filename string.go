@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unicode/utf8"
+)
 
 func main() {
 	var s string = "huangby"
@@ -48,5 +51,27 @@ func main() {
 	// \"      双引号 (只用在 "..." 形式的字符串面值中)
 	// \\      反斜杠
 	fmt.Println("响铃","\a");
+
+	//utf8 解码 import "unicode/utf8"
 	
+
+	schina := "Hello, 世界"
+	fmt.Println(len(schina))                    // "13"
+	fmt.Println(utf8.RuneCountInString(schina)) // "9"
+	for i := 0; i < len(schina); {
+		r, size := utf8.DecodeRuneInString(schina[i:])
+		fmt.Printf("%d\t%c\n", i, r)
+		i += size
+	}
+
+
+	n := 0
+	for _, _ = range schina {
+		n++
+	}
+	println(" n is",n) //9
+
+
+	
+
 }
